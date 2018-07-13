@@ -15,8 +15,7 @@ namespace WebTestFunc
 {
     public static class LogWebPerf
     {
-        //private static string eventHubName = ConfigurationManager.AppSettings["eventHubName"]; //"webtestlighthub";
-        private static string connectionString = ConfigurationManager.AppSettings["connectionString"]; //"Endpoint=sb://webtestlight.servicebus.windows.net/;SharedAccessKeyName=sender;SharedAccessKey=qjB2Lwli+RMOSszvNie9ntBUWTNlTcYwRNnZqmeD7t0=;EntityPath=webtestlighthub";
+        private static string connectionString = ConfigurationManager.AppSettings["connectionString"];
 
         [FunctionName("LogWebPerf")]
         public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "post", Route = null)]HttpRequestMessage req, TraceWriter log)
